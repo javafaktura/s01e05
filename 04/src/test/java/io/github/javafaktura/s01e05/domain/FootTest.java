@@ -6,16 +6,16 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 public class FootTest {
 
-    @ParameterizedTest(name = "Given {0} foots should be converted to {1} meters")
+    @ParameterizedTest(name = "Given {0} foot should be converted to {1} meters")
     @CsvSource( {
             " 0.00,       0.00",
             " 0.33,       0.10",
             " 1.00,       0.30",
             "10.23,       3.12"
     })
-    void givenFootsShouldBeConvertedToFollowingMetersValue(
-            double foots, double expectedMeters
+    void givenFootShouldBeConvertedToFollowingMetersValue(
+            double foot, double expectedMeters
     ) {
-        Assertions.assertEquals(expectedMeters, Foot.of(foots).toMeter().getValue());
+        Assertions.assertEquals(expectedMeters, Foot.of(foot).toMeter().getValue());
     }
 }

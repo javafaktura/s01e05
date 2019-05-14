@@ -2,9 +2,9 @@
 
 ![src//main//resources//images//beaufort.png](src//main//resources//images//beaufort.png)
 
-# Anemic class approach
+## Anemic class approach
 
-## Classes
+### Classes
 
 Anemic classes contains nothing more than just data.
 All business logic is stored in separate classes `Services`, `Converters`, `Utils` you call it.
@@ -13,7 +13,7 @@ All business logic is stored in separate classes `Services`, `Converters`, `Util
 * [KnotsToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverter.java) - logic converting [knot units](https://en.wikipedia.org/wiki/Knot_(unit)) to [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale)
 * [WaveHeightToBeaufortScaleConverter](src//main//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverter.java) - logic converting wave height to [Beaufort scale](https://en.wikipedia.org/wiki/Beaufort_scale)
 
-## Tests
+### Tests
 
 * [KnotsToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//KnotsToBeaufortScaleConverterTest.java) - tests covering [knot units](https://en.wikipedia.org/wiki/Knot_(unit)) converter logic
 * [WaveHeightToBeaufortScaleConverterTest](src//test//java//io//github//javafaktura//s01e05//anemic//WaveHeightToBeaufortScaleConverterTest.java) - tests covering wave converter logic
@@ -42,7 +42,7 @@ Domain classes contains both data and business logic.
 ### Tests
 
 * [BeaufortScaleFromKnotsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromKnotsTest.java) - testing conversion from knot units to Beaufort scale
-* [BeaufortScaleFromWaveHeightInFootsTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromWaveHeightInFootsTest.java) - testing conversion from wave height defined in foot units to Beaufort scale
+* [BeaufortScaleFromWaveHeightInFootTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleFromWaveHeightInFootTest.java) - testing conversion from wave height defined in foot units to Beaufort scale
 * [BeaufortScaleWaveHeightInMetersTest](src//test//java//io//github//javafaktura//s01e05//domain//BeaufortScaleWaveHeightInMetersTest.java) - testing conversion from wave height defined in meter units to Beaufort scale
 * [FootTest](src//test//java//io//github//javafaktura//s01e05//domain//FootTest.java) - testing foot unit class methods
 * [MeterTest](src//test//java//io//github//javafaktura//s01e05//domain//MeterTest.java) - testing meter unit class methods

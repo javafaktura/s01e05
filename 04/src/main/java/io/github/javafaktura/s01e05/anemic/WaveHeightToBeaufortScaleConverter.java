@@ -9,13 +9,13 @@ public class WaveHeightToBeaufortScaleConverter {
             case METER:
                 return convertMeters(waveHeight);
             case FOOT:
-                return convertFoots(waveHeight);
+                return convertFoot(waveHeight);
         }
         throw new IllegalArgumentException("Missing unit parameter to properly convert waveHeight to beaufort scale");
     }
 
     /** Was supposed to be private but I need to test it, so make it public **/
-    public static BeaufortScale convertFoots(double waveHeight) {
+    public static BeaufortScale convertFoot(double waveHeight) {
         if (waveHeight >= 46) {
             return BeaufortScale.HURRICANE;
         } else if (waveHeight >= 37.7) {
@@ -47,13 +47,13 @@ public class WaveHeightToBeaufortScaleConverter {
 
     /** Was supposed to be private but I need to test it, so make it public **/
     public static BeaufortScale convertMeters(double waveHeight) {
-        double foots = metersToFoot(waveHeight);
-        return convertFoots(foots);
+        double foot = metersToFoot(waveHeight);
+        return convertFoot(foot);
     }
 
     /** Was supposed to be private but I need to test it, so make it public **/
-    public static double footToMeters(double foots) {
-        return BigDecimal.valueOf(foots)
+    public static double footToMeters(double foot) {
+        return BigDecimal.valueOf(foot)
                 .multiply(
                         BigDecimal.valueOf(0.3048)
                 ).setScale(2, RoundingMode.HALF_UP)

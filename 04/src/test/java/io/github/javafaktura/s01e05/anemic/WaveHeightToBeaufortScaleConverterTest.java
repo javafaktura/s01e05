@@ -3,21 +3,20 @@ package io.github.javafaktura.s01e05.anemic;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.NullSource;
 
 class WaveHeightToBeaufortScaleConverterTest {
 
-    @ParameterizedTest(name = "Given {0} foots should be converted to {1} meters")
+    @ParameterizedTest(name = "Given {0} foot should be converted to {1} meters")
     @CsvSource( {
             " 0.00,       0.00",
             " 0.33,       0.10",
             " 1.00,       0.30",
             "10.23,       3.12"
     })
-    void givenFootsShouldBeConvertedToFollowingMetersValue(
-            double foots, double expectedMeters
+    void givenFootShouldBeConvertedToFollowingMetersValue(
+            double foot, double expectedMeters
     ) {
-        Assertions.assertEquals(expectedMeters, WaveHeightToBeaufortScaleConverter.footToMeters(foots));
+        Assertions.assertEquals(expectedMeters, WaveHeightToBeaufortScaleConverter.footToMeters(foot));
     }
 
     @ParameterizedTest(name = "Given wave of height {0} ft. should be following Beaufort scale = {1}")
@@ -37,10 +36,10 @@ class WaveHeightToBeaufortScaleConverterTest {
             "46,   12",
             "100,  12",
     })
-    void givenWaveHeightInFootsShouldBeFollowingBeaufortScale(
-            double foots, int expectedBeaufort
+    void givenWaveHeightInFootShouldBeFollowingBeaufortScale(
+            double foot, int expectedBeaufort
     ) {
-        Assertions.assertEquals(expectedBeaufort, WaveHeightToBeaufortScaleConverter.convertFoots(foots).getScale());
+        Assertions.assertEquals(expectedBeaufort, WaveHeightToBeaufortScaleConverter.convertFoot(foot).getScale());
     }
 
     @ParameterizedTest(name = "Given wave of height {0} meters should be following Beaufort scale = {1}")
@@ -106,8 +105,8 @@ class WaveHeightToBeaufortScaleConverterTest {
             "30,    METER, 12"
     })
     void givenWaveHeightShouldBeFollowingBeaufortScale(
-            double foots, HeightUnit unit, int expectedBeaufort
+            double foot, HeightUnit unit, int expectedBeaufort
     ) {
-        Assertions.assertEquals(expectedBeaufort, WaveHeightToBeaufortScaleConverter.convert(foots, unit).getScale());
+        Assertions.assertEquals(expectedBeaufort, WaveHeightToBeaufortScaleConverter.convert(foot, unit).getScale());
     }
 }

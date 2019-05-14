@@ -5,9 +5,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 
-public class BeaufortScaleFromWaveHeightInFootsTest {
+public class BeaufortScaleFromWaveHeightInFootTest {
 
-    @ParameterizedTest(name = "Given wave of height {0} in foots should be following Beaufort scale = {1}")
+    @ParameterizedTest(name = "Given wave of height {0} in foot should be following Beaufort scale = {1}")
     @CsvSource( {
             "0,       0",
             "0.32,    0",
