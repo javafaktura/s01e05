@@ -7,7 +7,7 @@ Read this article as reference [https://www.polskialarmsmogowy.pl/polski-alarm-s
 ## Code
 * [Pm10SmogAlertService.java](src//main//java//io//github//javafaktura//s01e05//Pm10SmogAlertService.java) - our smog service responsible for defining whenever given smog alert type should be send for given params
 * [Country.java](src//main//java//io//github//javafaktura//s01e05//Country.java) - simple enum storing all countries supported by service
-* [SmogAlertType.java](src//main//java//io//github//javafaktura//s01e05//Country.java) - simple enum storing all countries supported by service
+* [SmogAlertType.java](src//main//java//io//github//javafaktura//s01e05//SmogAlertLevel.java) - simple enum storing all countries supported by service
 
 ## Bad Tests
 * [BadPm10SmogAlertServiceTest.java](src//test//java//io//github//javafaktura//s01e05//BadPm10SmogAlertServiceTest.java) - multiple tests to cover all corner cases of service
